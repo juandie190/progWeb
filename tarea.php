@@ -20,8 +20,10 @@ class Tarea{
             }
     }
 
-    
+    //usarVariable post 
     public function store($tarea, $importancia){
+        if($_POST['tarea'].empty || $_POST['importancia'].empty)
+
         try{
             $sql = "INSERT INTO tareas (tarea, importancia)
             VALUES ('$tarea', '$importancia')";
